@@ -8,14 +8,18 @@ import Cronology from './pages/Cronology/Cronology';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
+  
 
     <Router>
-      <nav>
-          <Link to="/characters"> Characters </Link>
-          <Link to="/houses"> Houses </Link>
-          <Link to="/cronology"> Cronology </Link>
+    <div className='nv'>
+      <nav className='nav'>
+          <Link className="nav__link" to="/characters"> Characters </Link>
+          <Link className="nav__link" to="/houses"> Houses </Link>
+          <Link className="nav__link" to="/cronology"> Cronology </Link>
       </nav>
+    </div>
+      
 
       <Routes>
             <Route path="/" element={<Home />}></Route>
