@@ -7,7 +7,7 @@ const Gallery = (charact) => {
     <div className='container'>
     {props.map((e, index) =><> <div className='container_char' key={index}>
       <div className='container_char-img'>
-        <img src={e.image} alt={e.actor}></img>
+        <img src={e.image} alt={e.name}></img>
       </div>
       <div className='container_char-name'>
         <p>{e.name}</p>

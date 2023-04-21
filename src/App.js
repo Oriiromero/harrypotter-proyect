@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-    <CharactersContext.Provider value={{characters}}> 
+    <CharactersContext.Provider value={{characters, setCharacters}}> 
       <div className="app">
 
       
