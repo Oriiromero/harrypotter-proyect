@@ -1,5 +1,4 @@
 import './App.css';
-import Menu from './components/Menu/Menu';
 import Characters from './pages/Characters/Characters';
 import Home from './pages/Home/Home';
 import { Link, Route, Routes, BrowserRouter as Router} from 'react-router-dom';
