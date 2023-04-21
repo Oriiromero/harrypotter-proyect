@@ -1,5 +1,3 @@
-import React, { useContext } from 'react'
-import { CharactersContext } from '../../shared/characters.context';
 import './Gallery.css';
 
 const Gallery = (charact) => {
