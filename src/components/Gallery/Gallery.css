@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  height: 70vh;
+  width: 90vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black;
+  overflow-y: scroll;
+}
+.container_char {
+  width: 350px;
+  height: 400px;
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.container_char-img {
+  width: 350px;
+  height: 400px;
+}
+.container_char-img img {
+  width: 350px;
+  height: 400px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.container::-webkit-scrollbar {
+  width: 4px;
+  height: 12px;
+  background-color: rgb(107, 106, 106);
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
+}/*# sourceMappingURL=Gallery.css.map */

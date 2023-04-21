@@ -1,9 +1,14 @@
+@font-face {
+  font-family: "Sterilict";
+  src: url("../../assets/fonts/Sterilict-L3aen.ttf");
+}
 .app {
   display: flex;
   flex-direction: column-reverse;
 }
 
 .home {
+  background-image: url(../../assets/wallpaperflare.com_wallpaper.jpg);
   min-height: 100vh;
   max-width: 100vw;
   background-size: cover;
@@ -16,6 +21,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.logo img {
+  width: 40%;
 }
 
 .nv {
@@ -33,5 +41,6 @@
 .nv .nav__link {
   text-decoration: none;
   color: white;
-  font-size: xx-large;
+  font-family: "Sterilict";
+  font-size: 25px;
 }/*# sourceMappingURL=home.css.map */

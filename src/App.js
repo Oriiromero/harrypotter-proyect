@@ -7,19 +7,15 @@ import Cronology from './pages/Cronology/Cronology';
 import { CharactersContext } from './shared/characters.context';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Gallery from './components/Gallery/Gallery';
 
 
 function App() {
-  // https://hp-api.onrender.com/api/characters/house/:house
   const [ characters , setCharacters ]= useState([]);
   useEffect(() => {
     axios.get('https://starwars-databank-server.vercel.app/api/v1/characters?page=1&limit=964').then(res => {
       setCharacters(res.data.data)
     })
   }, []);
-
-
 
   return (
     <CharactersContext.Provider value={{characters}}> 
