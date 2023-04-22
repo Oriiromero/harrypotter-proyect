@@ -1,6 +1,7 @@
 import React from 'react';
 import Character from '../../components/Character/Character';
 import { useLocation } from 'react-router';
+import './CharacterDetail.css'
 
 const CharacterDetail = () => {
     const location = useLocation();
@@ -8,11 +9,12 @@ const CharacterDetail = () => {
 
     console.log(charToPrint);
 
-  return (
-    <div>
-        <Character character={charToPrint}/>
-    </div>
-  )
+  return (<div className='charpage'>
+    <Character character={charToPrint}/>
+  </div>
+  ) 
+  
+  
 }
 
 export default CharacterDetail;

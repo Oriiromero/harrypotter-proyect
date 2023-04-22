@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap%27");
+.characterdetail {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+.characterdetail__nav {
+  display: flex;
+  background-color: #0c0c0c;
+  justify-content: space-around;
+}
+.characterdetail__nav img {
+  width: 70px;
+}
+.characterdetail__nav--text {
+  color: white;
+  font-family: "Sterilict";
+}
+.characterdetail__nav--back {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 70%;
+}
+.characterdetail__nav--back span {
+  font-size: large;
+}
+.characterdetail__nav--to {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+.characterdetail__nav--to img {
+  width: 100%;
+}
+
+.detailcontainer {
+  background-color: #0c0c0c;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+.detailcontainer__img {
+  padding-top: 30px;
+  max-width: 65vw;
+  max-height: 50vh;
+}
+.detailcontainer__img img {
+  width: 100%;
+  height: 100%;
+}
+.detailcontainer__context {
+  color: white;
+  text-align: center;
+  font-family: "Sterilict";
+  padding: 0% 15%;
+}
+.detailcontainer__context p {
+  font-family: "Changa", sans-serif;
+  font-size: x-large;
+  text-align: justify;
+}/*# sourceMappingURL=Character.css.map */

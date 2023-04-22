@@ -20,7 +20,7 @@ function App() {
 
   return (
     <CharactersContext.Provider value={{characters, setCharacters}}> 
-      <div className="app">
+    
         <Router>
           <Routes>
             <Route path="/" element={<Home />}></Route>
@@ -30,7 +30,7 @@ function App() {
             <Route path='/characters/character-detail' element={<CharacterDetail />} ></Route>
           </Routes>
         </Router>
-      </div>
+ 
     </CharactersContext.Provider>
   );
 }
