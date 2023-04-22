@@ -1,4 +1,3 @@
-import Character from '../Character/Character';
 import './Gallery.css';
 import { useNavigate } from 'react-router';
 
