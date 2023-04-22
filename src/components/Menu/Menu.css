@@ -1,0 +1,17 @@
+.nav {
+  position: absolute;
+  max-height: 30px;
+  margin: 30px 0;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+}
+.nav__link {
+  text-decoration: none;
+  color: white;
+  font-family: "Sterilict";
+  font-size: 25px;
+}/*# sourceMappingURL=Menu.css.map */

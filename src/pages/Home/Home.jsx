@@ -9,10 +9,10 @@ const Home = () => {
     <div className='logo'>
       <img src={logo} alt='logo'/>
     </div>
-      <footer>
+      {/* <footer>
         <Menu />
-      </footer>
-
+      </footer> */}
+      <Menu></Menu>
     </div>
   )
 }

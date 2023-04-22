@@ -5,6 +5,7 @@ import homeIcon from '../../assets/home-icon.png'
 import lupa from '../../assets/lupa.png'
 import './characters.css';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
+import Menu from '../../components/Menu/Menu';
 
 const Characters = () => {
   const  { characters } = useContext(CharactersContext);
@@ -36,6 +37,7 @@ const Characters = () => {
       <div className='gallery-container'>
         <Gallery props={filteredChars}></Gallery>
       </div>
+      <Menu></Menu>
     </div>
   )
 }

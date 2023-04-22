@@ -26,21 +26,3 @@
       width: 40%;
     }
 }
-.nv {
-    position: absolute;
-    width: 100%;
-    max-height: 30px;
-    margin: 30px 0;
-  .nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    &__link {
-      text-decoration: none;
-      color: white;
-      font-family: 'Sterilict';
-      font-size: 25px;
-    }
-  }
-}
