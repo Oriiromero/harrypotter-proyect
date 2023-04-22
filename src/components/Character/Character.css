@@ -57,10 +57,34 @@
   color: white;
   text-align: center;
   font-family: "Sterilict";
-  padding: 0% 15%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.detailcontainer__context p {
-  font-family: "Changa", sans-serif;
-  font-size: x-large;
+.detailcontainer__context--scrll {
+  width: 55%;
+  height: 200px;
+  overflow-y: scroll;
+  padding: 0% 3%;
   text-align: justify;
+}
+.detailcontainer__context--P {
+  width: 600px;
+}
+.detailcontainer__context--P p {
+  font-family: "Changa", sans-serif;
+  font-size: 21px;
+}
+
+.detailcontainer__context--scrll::-webkit-scrollbar {
+  width: 2px;
+  height: 3px;
+  background-color: rgb(107, 106, 106);
+}
+
+.detailcontainer__context--scrll::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
 }/*# sourceMappingURL=Character.css.map */

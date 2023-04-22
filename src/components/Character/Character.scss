@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap%27');
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@300&display=swap%27");
 
 .characterdetail {
   display: flex;
   flex-direction: column;
-  max-height: 100vh;   
+  max-height: 100vh;
   &__nav {
     display: flex;
     background-color: #0c0c0c;
@@ -16,23 +16,23 @@
       font-family: "Sterilict";
     }
     &--back {
-      cursor: pointer;  
+      cursor: pointer;
       display: flex;
       align-items: center;
       width: 70%;
-      span{
+      span {
         font-size: large;
       }
     }
-    &--to{
-        width: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-top: 15px;
-        img{
-            width: 100%;
-        }
+    &--to {
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 15px;
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -57,11 +57,36 @@
     color: white;
     text-align: center;
     font-family: "Sterilict";
-    padding: 0% 15%;
-    p{
-        font-family: 'Changa', sans-serif;
-        font-size: x-large;
-        text-align: justify;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &--scrll {
+      width: 55%;
+      height: 200px;
+      overflow-y: scroll;
+      padding: 0% 3%;
+      text-align: justify;
     }
+    &--P {
+        width: 600px;
+        p { 
+          font-family: "Changa", sans-serif;
+          font-size: 21px;
+        }
+      }
   }
+}
+
+.detailcontainer__context--scrll::-webkit-scrollbar {
+  width: 2px;
+  height: 3px;
+  background-color: rgb(107, 106, 106);
+}
+
+.detailcontainer__context--scrll::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
 }

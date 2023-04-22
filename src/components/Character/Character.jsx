@@ -29,7 +29,11 @@ const Character = ({ character }) => {
         </div>
         <div className='detailcontainer__context'>
           <h1>{character.name}</h1>
-          <p> {character.description} </p>
+          <div className='detailcontainer__context--scrll'>
+            <div className='detailcontainer__context--P'>
+              <p> {character.description} </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
