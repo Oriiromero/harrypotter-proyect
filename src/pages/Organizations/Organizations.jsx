@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import homeIcon from '../../assets/home-icon.png';
 import lupa from '../../assets/lupa.png';
 import GalleryOrganizations from '../../components/GalleryOrganizations/GalleryOrganizations';
+import Gallery from '../../components/Gallery/Gallery';
 const Organizations = () => {
     const { organizations } = useContext(CharactersContext);
     const [ filteredOrganizations, setFilteredOrganizations] = useState([]);
@@ -15,7 +16,7 @@ const Organizations = () => {
         setFilteredOrganizations(filterOrg);
     }
 
-    
+
     useEffect(() => {
         setFilteredOrganizations(organizations);
     }, [organizations] )

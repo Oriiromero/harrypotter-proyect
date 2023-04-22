@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import CharacterDetail from './pages/CharacterDetail/CharacterDetail';
 import Organizations from './pages/Organizations/Organizations';
+import OrganizationDetail from './pages/OrganizationDetail/OrganizationDetail';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path="/organizations" element={<Organizations />}></Route>
             <Route path="/cronology" element={<Cronology />}></Route>
             <Route path='/characters/character-detail' element={<CharacterDetail />} ></Route>
+            <Route path='/organizations/organization-detail' element={<OrganizationDetail />}></Route>
           </Routes>
         </Router>
  
