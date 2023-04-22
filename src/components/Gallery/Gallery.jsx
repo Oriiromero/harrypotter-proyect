@@ -8,7 +8,7 @@ const Gallery = (charact) => {
   
   const goToCharDetail = (e, index) => {
     navigate('character-detail', {state: {element : e}});
-  }
+  }   
 
   return (
     <div className='container'>

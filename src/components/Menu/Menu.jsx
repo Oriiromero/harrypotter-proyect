@@ -7,7 +7,7 @@ const Menu = () => {
     // <div className='nv'>
       <nav className='nav'>
         <Link className="nav__link" to="/characters">Characters</Link>
-        <Link className="nav__link" to="/houses">Houses</Link>
+        <Link className="nav__link" to="/organizations">Organizations</Link>
         <Link className="nav__link" to="/cronology">Cronology</Link>
       </nav>
     // </div>
