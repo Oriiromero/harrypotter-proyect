@@ -1,20 +1,22 @@
-
-   
-  .nav {
-     position: absolute;
-    // width: 100%;
+.nav {
+    position: relative;
     max-height: 30px;
-    margin: 30px 0;
-   background-color: transparent;
+    background-color: transparent;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: black;
-    &__link {
-      text-decoration: none;
-      color:white;
-      font-family: 'Sterilict';
-      font-size: 25px;
-    }
+    // padding-bottom: 15px;
+    
+      &__link {
+        text-decoration: none;
+        color:white;
+        font-family: 'Sterilict';
+        font-size: 25px;
+        transition: 0.8s;
+      }
+
+      &__link:hover{
+       color: gray;
+      }
   }

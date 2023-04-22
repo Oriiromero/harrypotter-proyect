@@ -7,6 +7,7 @@ import Cronology from './pages/Cronology/Cronology';
 import { CharactersContext } from './shared/characters.context';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import CharacterDetail from './pages/CharacterDetail/CharacterDetail';
 
 
 function App() {
@@ -20,22 +21,13 @@ function App() {
   return (
     <CharactersContext.Provider value={{characters, setCharacters}}> 
       <div className="app">
-
-      
         <Router>
-          {/* <div className='nv'>
-            <nav className='nav'>
-              <Link className="nav__link" to="/characters"> Characters </Link>
-              <Link className="nav__link" to="/houses"> Houses </Link>
-              <Link className="nav__link" to="/cronology"> Cronology </Link>
-            </nav>
-          </div> */}
-
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/characters" element={<Characters />}></Route>
             <Route path="/houses" element={<Houses />}></Route>
             <Route path="/cronology" element={<Cronology />}></Route>
+            <Route path='/characters/character-detail' element={<CharacterDetail />} ></Route>
           </Routes>
         </Router>
       </div>
