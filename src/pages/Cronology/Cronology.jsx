@@ -6,12 +6,16 @@ import './Cronology.css'
 import arrow from '../../assets/arrow.png'
 import homeIcon from '../../assets/home-icon.png'
 import { Link } from 'react-router-dom';
+import i18n from '../../i18n';
+import spanish from '../../assets/spain.png';
+import english from '../../assets/united-kingdom.png'
 
 const Cronology = () => {
   const  { characters } = useContext(CharactersContext);
   const [sortedChars, setSortedChars] = useState([]);
+  const { lngs } = useContext(CharactersContext);
   
-  const [text, setText] = useState('Z');
+  const [text, setText] = useState('A');
   const [sortOrder, setSortOrder] = useState('asc'); // add state for sort order
   
   const onSort = () => {
@@ -44,9 +48,15 @@ const Cronology = () => {
     <div className='body'>
     <div className='navigation'>
       <div className='home-back'>
-      <Link to='/'>
-          <img className='icon-home' src={homeIcon} alt='home_icon-img'></img>
-      </Link>
+        <Link to='/'>
+            <img className='icon-home' src={homeIcon} alt='home_icon-img'></img>
+        </Link>
+        {Object.keys(lngs).map((lng, index) =>{
+              return (
+                lngs[lng].nativeName === 'English' ? <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={english} alt='home' /> : <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={spanish} alt='star'/>
+              )
+            })} 
+      
       </div>
     </div>
      <div className='crono-container'>

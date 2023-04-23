@@ -13,7 +13,8 @@
   background-color: #0C0C0C;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 50px;
 }
 .searcher_input {
   position: relative;
@@ -40,12 +41,19 @@
   color: white;
 }
 .searcher_icon {
-  width: 50px;
+  width: 300px;
   height: 40px;
+  display: flex;
+  justify-content: space-evenly;
 }
 .searcher_icon img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
+}
+.searcher_icon .flags {
+  width: 50px;
+  cursor: pointer;
 }
 
 .gallery-container {
@@ -66,6 +74,6 @@
   transition: 0.8s;
 }
 
-.searcher_icon:hover img {
+.searcher_icon img:hover, .searcher_icon .flags:hover {
   opacity: 0.5;
 }/*# sourceMappingURL=characters.css.map */

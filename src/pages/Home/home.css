@@ -14,9 +14,22 @@
   background-size: cover;
   overflow: hidden;
 }
+.home .language {
+  display: flex;
+  justify-content: flex-end;
+}
+.home .language .flags {
+  width: 50px;
+  margin: 0 10px;
+  transition: 0.8s;
+  cursor: pointer;
+}
+.home .language .flags:hover {
+  opacity: 0.5;
+}
 
 .logo {
-  height: 90vh;
+  height: 82vh;
   width: 100vw;
   display: flex;
   flex-direction: column;

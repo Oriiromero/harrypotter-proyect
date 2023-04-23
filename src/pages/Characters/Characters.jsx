@@ -6,10 +6,14 @@ import lupa from '../../assets/lupa.png'
 import './characters.css';
 import { Link } from 'react-router-dom';
 import Menu from '../../components/Menu/Menu';
+import i18n from '../../i18n';
+import spanish from '../../assets/spain.png';
+import english from '../../assets/united-kingdom.png'
 
 const Characters = () => {
   const  { characters } = useContext(CharactersContext);
   const [filteredChars, setFilteredChars] = useState([]);
+  const { lngs } = useContext(CharactersContext);
 
   const onFilter = (e) => {
     const filteredCharac = characters.filter((character)=> character.name.toLowerCase().includes(e.target.value.toLowerCase()));
@@ -32,6 +36,11 @@ const Characters = () => {
           <Link to='/'>
             <img src={homeIcon} alt='home_icon-img'></img>
           </Link>
+          {Object.keys(lngs).map((lng, index) =>{
+            return (
+              lngs[lng].nativeName === 'English' ? <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={english} alt='home' /> : <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={spanish} alt='star'/>
+            )
+          })} 
         </div>
       </div>
       <div className='gallery-container'>

@@ -5,17 +5,19 @@ import { Link } from 'react-router-dom';
 import homeIcon from '../../assets/home-icon.png';
 import lupa from '../../assets/lupa.png';
 import GalleryOrganizations from '../../components/GalleryOrganizations/GalleryOrganizations';
+import i18n from '../../i18n';
+import spanish from '../../assets/spain.png';
+import english from '../../assets/united-kingdom.png'
 
 const Organizations = () => {
     const { organizations } = useContext(CharactersContext);
     const [ filteredOrganizations, setFilteredOrganizations] = useState([]);
-
+    const { lngs } = useContext(CharactersContext);
 
     const onFilter = (e) => {
         const filterOrg = organizations.filter((organization) => organization.name.toLowerCase().includes(e.target.value.toLowerCase()));
         setFilteredOrganizations(filterOrg);
     }
-
 
     useEffect(() => {
         setFilteredOrganizations(organizations);
@@ -32,6 +34,11 @@ const Organizations = () => {
                     <Link to='/'>
                         <img src={homeIcon} alt='home_icon-img'></img>
                     </Link>
+                    {Object.keys(lngs).map((lng, index) =>{
+                        return (
+                            lngs[lng].nativeName === 'English' ? <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={english} alt='home' /> : <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={spanish} alt='star'/>
+                         )
+                    })}
                 </div>
             </div>
             <div className='gallery-container'>

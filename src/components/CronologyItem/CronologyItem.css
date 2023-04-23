@@ -27,6 +27,9 @@
      object-fit: fill;
   border-radius: 2px;
 }
+.timeline-item-content p {
+  font-family: "Sterilict", sans-serif;
+}
 
 .timeline-item:nth-child(odd) {
   align-self: flex-end;
