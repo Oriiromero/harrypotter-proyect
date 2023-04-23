@@ -11,7 +11,7 @@ const Gallery = (charact) => {
 
   return (
     <div className='container'>
-    {props.map((e, index) =><div className='container_char' key={index}>
+    {props.map((e, index) =><div className='container_char glow' key={index}>
       <div className='container_char-img'>
         <img onClick={() => goToCharDetail(e, index)} src={e.image} alt={e.name}></img>
       </div>

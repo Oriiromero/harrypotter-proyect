@@ -10,7 +10,7 @@
     &_char {
         width: 300px;
         height: 300px;
-        margin: 10px 10px;
+        margin: 18px 15px;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -46,10 +46,13 @@
 
         &:hover {
             .container_char-name {
-                top: 90%;
+                top: 90%; 
             }
+
+            box-shadow: -2px -1px 15px 6px rgb(178, 173, 173);
+            
         }
-    } 
+    }    
 }
 
 .container::-webkit-scrollbar{
@@ -62,3 +65,4 @@
     background-color: white;
     border-radius: 5px;
 }
+
