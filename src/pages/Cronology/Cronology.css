@@ -1,0 +1,91 @@
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #0C0C0C;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 90vw;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+.timeline-container::-webkit-scrollbar {
+  width: 2px;
+  height: 3px;
+  background-color: rgb(107, 106, 106);
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.timeline-container::after {
+  background-color: white;
+  content: "";
+  position: absolute;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 4230%;
+}
+
+.navigation {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navigation .home-back {
+  width: 40px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+.navigation .home-back img {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: 0.8s;
+}
+.navigation .home-back img:hover {
+  opacity: 0.5;
+}
+
+.crono-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.crono-container .circle-letter {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+.crono-container .arrow {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+}
+.crono-container .arrow img {
+  width: 100%;
+  height: 100%;
+}
+.crono-container .reverse {
+  transform: rotate(180deg);
+}/*# sourceMappingURL=Cronology.css.map */

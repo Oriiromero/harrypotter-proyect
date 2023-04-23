@@ -25,8 +25,8 @@ const Characters = () => {
     <div className='container-characters'>
       <div className='searcher'>
         <div className='searcher_input'>
-          <input onChange={(e) => onFilter(e)} className='searcher_input-inp' type='text' placeholder='Search...' />
           <img className='input-lupa' src={lupa} alt='lupa' />
+          <input onChange={(e) => onFilter(e)} className='searcher_input-inp' type='text' placeholder='Search...' />
         </div>
         <div className='searcher_icon'>
           <Link to='/'>

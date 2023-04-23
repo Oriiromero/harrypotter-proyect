@@ -4,13 +4,11 @@ import './Menu.css'
 
 const Menu = () => {
   return (
-    // <div className='nv'>
       <nav className='nav'>
         <Link className="nav__link" to="/characters">Characters</Link>
         <Link className="nav__link" to="/organizations">Organizations</Link>
-        <Link className="nav__link" to="/cronology">Cronology</Link>
+        <Link className="nav__link" to="/timeline">Timeline</Link>
       </nav>
-    // </div>
   )
 }
 

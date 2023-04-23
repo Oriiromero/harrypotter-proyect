@@ -4,35 +4,43 @@
   display: flex;
   flex-direction: column;
   max-height: 100vh;
+
   &__nav {
     display: flex;
     background-color: #0c0c0c;
     justify-content: space-around;
+
     img {
       width: 70px;
     }
+
     &--text {
       color: white;
       font-family: "Sterilict";
     }
+
     &--back {
       cursor: pointer;
       display: flex;
       align-items: center;
       width: 70%;
+
       span {
         font-size: large;
       }
     }
+
     &--to {
       width: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
       padding-top: 15px;
+
       img {
         width: 100%;
       }
+      
     }
   }
 }
@@ -44,10 +52,11 @@
   flex-direction: column;
   height: 100vh;
   justify-content: center;
+
   &__img {
-    padding-top: 30px;
     max-width: 65vw;
     max-height: 50vh;
+    
     img {
       width: 100%;
       height: 100%;
@@ -64,8 +73,8 @@
     flex-direction: column;
 
     &--scrll {
-      width: 55%;
-      height: 200px;
+      width: 60%;
+      height: 170px;
       overflow-y: scroll;
       padding: 0% 3%;
       text-align: justify;

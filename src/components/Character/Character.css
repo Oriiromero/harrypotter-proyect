@@ -45,7 +45,6 @@
   justify-content: center;
 }
 .detailcontainer__img {
-  padding-top: 30px;
   max-width: 65vw;
   max-height: 50vh;
 }
@@ -64,8 +63,8 @@
   flex-direction: column;
 }
 .detailcontainer__context--scrll {
-  width: 55%;
-  height: 200px;
+  width: 60%;
+  height: 170px;
   overflow-y: scroll;
   padding: 0% 3%;
   text-align: justify;
