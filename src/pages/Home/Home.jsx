@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Menu from '../../components/Menu/Menu'
 import logo from '../../assets/logo.png'
 import './home.css';
@@ -11,13 +11,20 @@ import { CharactersContext } from '../../shared/characters.context';
 const Home = () => {
 
   const { lngs } = useContext(CharactersContext);
+  const [language, setLanguage] = useState(i18n.language);
+
+  useEffect(() => {
+    const unregister = i18n.on('languageChanged', (lng) => {
+      setLanguage(lng);
+    });
+  }, []);
 
   return (
     <div className='home'>
         <div className='language'>
         {Object.keys(lngs).map((lng, index) =>{
             return (
-              lngs[lng].nativeName === 'English' ? <img className='flags' key={index} onClick={() => i18n.changeLanguage(lng)} src={english} alt='home' /> : <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={spanish} alt='star'/>
+              lngs[lng].nativeName === 'English' ? <img key={index} className='flags' onClick={() => i18n.changeLanguage(lng)} src={english} alt='home' /> : <img key={index} className='flags' onClick={() => i18n.changeLanguage(lng)} src={spanish} alt='star'/>
             )
           })} 
         </div>

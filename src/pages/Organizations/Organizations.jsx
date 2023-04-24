@@ -13,6 +13,7 @@ const Organizations = () => {
     const { organizations } = useContext(CharactersContext);
     const [ filteredOrganizations, setFilteredOrganizations] = useState([]);
     const { lngs } = useContext(CharactersContext);
+    const [language, setLanguage] = useState(i18n.language);
 
     const onFilter = (e) => {
         const filterOrg = organizations.filter((organization) => organization.name.toLowerCase().includes(e.target.value.toLowerCase()));
@@ -22,6 +23,12 @@ const Organizations = () => {
     useEffect(() => {
         setFilteredOrganizations(organizations);
     }, [organizations] )
+
+    useEffect(() => {
+        const unregister = i18n.on('languageChanged', (lng) => {
+          setLanguage(lng);
+        });
+      }, []);
 
     return (
         <div className='container-characters'>
@@ -36,7 +43,7 @@ const Organizations = () => {
                     </Link>
                     {Object.keys(lngs).map((lng, index) =>{
                         return (
-                            lngs[lng].nativeName === 'English' ? <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={english} alt='home' /> : <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={spanish} alt='star'/>
+                            lngs[lng].nativeName === 'English' ? <img key={index} className='flags' onClick={() => i18n.changeLanguage(lng)} src={english} alt='home' /> : <img key={index} className='flags' onClick={() => i18n.changeLanguage(lng)} src={spanish} alt='star'/>
                          )
                     })}
                 </div>

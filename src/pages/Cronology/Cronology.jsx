@@ -14,6 +14,7 @@ const Cronology = () => {
   const  { characters } = useContext(CharactersContext);
   const [sortedChars, setSortedChars] = useState([]);
   const { lngs } = useContext(CharactersContext);
+  const [language, setLanguage] = useState(i18n.language);
   
   const [text, setText] = useState('A');
   const [sortOrder, setSortOrder] = useState('asc'); // add state for sort order
@@ -43,6 +44,12 @@ const Cronology = () => {
     setSortedChars(characters);
   }, [characters])
 
+  useEffect(() => {
+    const unregister = i18n.on('languageChanged', (lng) => {
+      setLanguage(lng);
+    });
+  }, []);
+
   return (
   <>
     <div className='body'>
@@ -53,7 +60,7 @@ const Cronology = () => {
         </Link>
         {Object.keys(lngs).map((lng, index) =>{
               return (
-                lngs[lng].nativeName === 'English' ? <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={english} alt='home' /> : <img className='flags' onClick={() => i18n.changeLanguage(lng)} src={spanish} alt='star'/>
+                lngs[lng].nativeName === 'English' ? <img key={index} className='flags' onClick={() => i18n.changeLanguage(lng)} src={english} alt='home' /> : <img key={index} className='flags' onClick={() => i18n.changeLanguage(lng)} src={spanish} alt='star'/>
               )
             })} 
       
