@@ -6,6 +6,8 @@ import i18n from '../../i18n';
 import spanish from '../../assets/spain.png';
 import english from '../../assets/united-kingdom.png'
 import { CharactersContext } from '../../shared/characters.context';
+import ReactAudioPlayer from 'react-audio-player';
+import song from '../../assets/sounds/starwars.mp3'
 
 
 const Home = () => {
@@ -21,6 +23,7 @@ const Home = () => {
 
   return (
     <div className='home'>
+    <ReactAudioPlayer src={song} autoPlay volume={0.1}/>
         <div className='language'>
         {Object.keys(lngs).map((lng, index) =>{
             return (
